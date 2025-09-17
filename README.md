@@ -13,6 +13,7 @@ Este projeto é um template completo usando NestJS, TypeORM e PostgreSQL. Contem
 - Docker / Docker Compose
 - Class-validator / Class-transformer
 - Jest para testes
+- Bruno api - https://www.usebruno.com/
 
 ---
 
