@@ -1,0 +1,25 @@
+meta {
+  name: products/post
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/products/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Carro de controle remoto 3",
+    "description": "Carro de controle remoto 3
+    "price": 99.99,
+    "establishmentId":"c0d61604-84d8-458d-80b4-054ee0490a33",
+    "createdById": "2c12740f-e393-42e9-a19f-f05e6a6d2c6b"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

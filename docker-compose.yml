@@ -1,0 +1,39 @@
+services:
+  postgres:
+    container_name: postgres-nestjs_sales
+    image: postgres:17-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: nestjs_sales
+      POSTGRES_USER: shared
+      POSTGRES_PASSWORD: pg_password
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U shared -d nestjs_sales']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  migrations-runner:
+    container_name: migrations-runner-praticando-typeorm
+    build:
+      dockerfile: ./Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USERNAME: shared
+      DB_PASSWORD: pg_password
+      DB_DATABASE: nestjs_sales
+      NODE_ENV: test
+    volumes:
+      - .:/usr/src/nestjs_sales
+
+volumes:
+  postgres_data:
+    driver: local

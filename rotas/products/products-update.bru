@@ -1,0 +1,21 @@
+meta {
+  name: products/update
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3000/products/81774ff4-c8a4-435c-8c45-a49d04b11f53
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "description": "Caderno do bento e toto"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "nestjs_sales/bruno",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

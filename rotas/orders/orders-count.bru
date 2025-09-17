@@ -1,0 +1,15 @@
+meta {
+  name: orders/count
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/orders/count
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

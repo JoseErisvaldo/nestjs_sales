@@ -1,0 +1,24 @@
+meta {
+  name: establishment/post
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/establishment
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "naldoEmpresa",
+    "address": "endereço Naldo",
+    "ownerId": "50d5063f-8be4-44a8-a13b-fa7f6dcfdf1d",
+    "novoCampo": "teste"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

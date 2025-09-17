@@ -1,0 +1,22 @@
+meta {
+  name: establishment/update
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3000/establishment/e11f885e-febe-478f-bddf-ed35c168e845
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "naldoEmpresa 2",
+    "address": "endereço Naldo 2"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

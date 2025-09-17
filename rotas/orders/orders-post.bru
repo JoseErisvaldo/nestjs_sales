@@ -1,0 +1,28 @@
+meta {
+  name: orders/post
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/orders
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "total": 99.99,
+    "userId": "c0d3a66d-f38f-4893-9b06-4f6b82a471fe",
+    "establishmentId": "b9da52ab-04dc-43fa-aee5-a18fd4fe9d71",
+    "status": "pending",
+    //"canceledAt": "123456",
+    //"reasonCanceled": "123456",
+    "paymentMethod": "pix",
+    "observation": "Opcional"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
